@@ -47,7 +47,7 @@ public class APIController {
         return resp;
     }
 
-    @RequestMapping(value = "/delayed", method = RequestMethod.PUT)
+    @RequestMapping(value = "/delayed", method = RequestMethod.POST)
     public DelayedResponse updateDelayedConfiguration(@RequestBody DelayedRequest request){
         delayedConfiguration.setDelayed(request.getDelayed());
         DelayedResponse resp = new DelayedResponse();
